@@ -12,4 +12,16 @@ export class UsersController {
     userHistory():object {
         return {id:1,text:"KJHJKHJKHJKH"};
     }
+    
+    @Post("add-user")
+    addUser(@Body() record:any):string{
+        console.log(record,"===")
+        return "OK ADD USER"
+    }
+
+    @Get("list/:id")
+    listUser(@Param() record:any):string{
+        console.log(record,"===")
+        return "List user"+record.id
+    }
 }
