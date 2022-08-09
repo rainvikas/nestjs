@@ -1,4 +1,4 @@
-import { Controller, Get, Post } from '@nestjs/common';
+import { Controller, Get, Param, Post } from '@nestjs/common';
 import { get } from 'http';
 
 @Controller('posts')
@@ -9,9 +9,21 @@ export class PostsController {
         return "post list"
     }
 
-    @Post("post-add")
+    @Get("post-add")
     postAdd(){
         return "post add"
     }
+
+    @Get("detail")
+    postDetails(){
+        return "post detail"
+    }
+
+    @Post("lists/:id")
+    detailById(@Param("id") id: number):string {
+        console.log(id, '===')
+        return "list user"+id
+    }
+
 
 }
