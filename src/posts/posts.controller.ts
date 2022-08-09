@@ -1,6 +1,7 @@
 import { Controller, DefaultValuePipe, Get, HttpStatus, Param, ParseArrayPipe, ParseIntPipe, Post, Query } from '@nestjs/common';
 import { get } from 'http';
 
+import { AuthPipe } from 'src/pipe/AuthPipe';
 @Controller('posts')
 export class PostsController {
 
@@ -36,13 +37,16 @@ export class PostsController {
     //     return "list user"+page 
     // }
 
-    detailById(@Query("id",new ParseArrayPipe({items:Number,separator:','})) 
-    id:number):string {
+    // detailById(@Query("id",new ParseArrayPipe({items:Number,separator:','})) 
+    // id:number):string {
+    //     console.log(id,'===')
+    //     return "list user"+id 
+    // }
+
+    detailById(@Query("id") id:number):string {
         console.log(id,'===')
         return "list user"+id 
     }
-
-    
 
 
  
