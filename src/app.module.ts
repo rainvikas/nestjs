@@ -15,12 +15,13 @@ import { AuthMiddleware2 } from './middleware/auth2';
   controllers: [AppController, UsersController, PostsController],
   providers: [AppService, BlogsService],
 })
-export class AppModule implements NestModule {
-  configure(consumer: MiddlewareConsumer) {
-    consumer.apply(AuthMiddleware,AuthMiddleware2)
-    .exclude({
-      path:"posts/post-list",method:RequestMethod.GET
-    })
-    .forRoutes("posts")
-  }
+
+ export class AppModule {
+  // configure(consumer: MiddlewareConsumer) {
+  //   consumer.apply(AuthMiddleware,AuthMiddleware2)
+  //   .exclude({
+  //     path:"posts/post-list",method:RequestMethod.GET
+  //   })
+  //   .forRoutes("posts")
+  // }
 }
