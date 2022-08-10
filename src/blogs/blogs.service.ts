@@ -14,6 +14,8 @@ export class BlogsService {
         this.blogs.push(data);
     }
 
+    
+
     finddata():any[]{
     return this.blogs
     }

@@ -40,22 +40,24 @@ export class PostsController {
   //     console.log(id,'===')
   //     return "list user"+id
   // }
-  // detailById(@Query("page",new DefaultValuePipe(0))
-  // page: number):string {
-  //     console.log(page,'===')
-  //     return "list user"+page
-  // }
+//   detailById(@Query("page",new DefaultValuePipe(0))
+//   page: number):string {
+//       console.log(page,'===')
+//       return "list user"+page
+//   }
 
-  // detailById(@Query("id",new ParseArrayPipe({items:Number,separator:','}))
-  // id:number):string {
-  //     console.log(id,'===')
-  //     return "list user"+id
-  // }
+//   detailById(@Query("id",new ParseArrayPipe({items:Number,separator:','}))
+//   id:number):string {
+//       console.log(id,'===')
+//       return "list user"+id
+//   }
   detailById(@Query('id') id: number): string {
     console.log(id, '===');
+
+
     return 'list user' + id;
 
-    
+
   }
 
 
