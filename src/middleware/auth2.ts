@@ -6,5 +6,7 @@ export class AuthMiddleware2 implements NestMiddleware {
   use(req: Request, res: Response, next: NextFunction) {
     console.log('request2 is coming...', req.url);
     next();
+
+    
   }
 }

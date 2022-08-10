@@ -11,7 +11,7 @@ export class BlogsService {
     private readonly blogs:any[]=[];
 
     create(data:any){
-        this.blogs.push(data)
+        this.blogs.push(data);
     }
 
     finddata():any[]{

@@ -54,5 +54,9 @@ export class PostsController {
   detailById(@Query('id') id: number): string {
     console.log(id, '===');
     return 'list user' + id;
+
+    
   }
+
+
 }
